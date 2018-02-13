@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>{{title}}</h2>
+  <p>Se consume y se muestra en pantalla con angular2 los datos de la url dada:</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id de usuario</th>
+        <th>Id de post</th>
+        <th>Titulo</th>
+        <th>Texto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts | async">
+      	<td>{{post.userId}}</td>
+      	<td>{{post.id}}</td>
+      	<td>{{post.title}}</td>
+      	<td>{{post.body}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
